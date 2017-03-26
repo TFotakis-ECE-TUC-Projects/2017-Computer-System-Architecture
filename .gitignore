@@ -5,4 +5,6 @@
 !*.txt
 !*.data
 !*.pdf
+!*.png
+!*.dia
 !*/
