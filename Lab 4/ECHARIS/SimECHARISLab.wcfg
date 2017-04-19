@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/tzanis/Workspace/Xilinx/TUC-Computer-System-Architecture-1/Lab 4/ECHARIS/TestECHARIS_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bus32pkg" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testecharis" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="16" />
+   <wave_markers>
+      <marker time="1815000000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/testecharis/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Extended_control_0/currents" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">currents</obj_property>
+      <obj_property name="ObjectShortName">currents</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/IFSTAGE_0/PC_Register32/dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/DECSTAGE_0/RegisterFile_0/ard1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ard1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ard1[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/DECSTAGE_0/RegisterFile_0/dout1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout1[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/DECSTAGE_0/RegisterFile_0/ard2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ard2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ard2[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/DECSTAGE_0/RegisterFile_0/dout2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout2[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/DECSTAGE_0/RegisterFile_0/awr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">awr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">awr[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/DECSTAGE_0/RegisterFile_0/din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/DECSTAGE_0/RegisterFile_0/wren" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wren</obj_property>
+      <obj_property name="ObjectShortName">wren</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/MEMSTAGE_0/Data_MEM_0/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[9:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/MEMSTAGE_0/Data_MEM_0/we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/MEMSTAGE_0/Data_MEM_0/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[9:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/MEMSTAGE_0/Data_MEM_0/din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testecharis/uut/Datapath_0/MEMSTAGE_0/Data_MEM_0/dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>
