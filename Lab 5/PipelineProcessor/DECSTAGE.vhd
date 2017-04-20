@@ -10,7 +10,7 @@ entity DECSTAGE is
 				RF_B_sel 				: in  	STD_LOGIC;
 				Reset 					: in  	STD_LOGIC;
 				Clk 						: in  	STD_LOGIC;
-				ImmedIn 				: in  STD_LOGIC_VECTOR (31 downto 0);
+				MEM_out 				: in  STD_LOGIC_VECTOR (31 downto 0);
 				ImmedOut 				: out  STD_LOGIC_VECTOR (31 downto 0);
 				RF_A 						: out  STD_LOGIC_VECTOR (31 downto 0);
 				RF_B 						: out  STD_LOGIC_VECTOR (31 downto 0));
@@ -63,7 +63,7 @@ begin
 	Mux_RF_B: for i in 0 to 4 generate
 		mux2_i: Mux2 port map(input(0)=>Instr(11+i), 	input(1)=>Instr(16+i), 	output=>RF_B_Addr(i), 	control=>RF_B_sel);
 	end generate Mux_RF_B;
-	BusMux_RF_WrData_0: BusMux2 port map(input(0)=>WBMuxOut, input(1)=>ImmedIn, output=>RF_WrData, control=>RF_WrData_sel);
+	BusMux_RF_WrData_0: BusMux2 port map(input(0)=>WBMuxOut, input(1)=>MEM_out, output=>RF_WrData, control=>RF_WrData_sel);
 --	BusMux_RF_WrData_1: BusMux2 port map(input(0)=>RF_WrData_mux1, input(1)=>ImmedIn, output=>RF_WrData, control=>RF_WrData_sel(1));
 	ImmediateProcessor_0: ImmediateProcessor port map(Data=>Instr(15 downto 0), Dout=>ImmedSig, Instr=>Instr(31 downto 26));
 	--Register32_A: Register32 port map(data=>RF_A_sig, dout=>RF_A, we=>RF_AB_we, reset=>Reset, clk=>Clk);

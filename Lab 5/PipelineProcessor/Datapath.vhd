@@ -33,12 +33,12 @@ architecture Structural of Datapath is
 		 				Awr							: in 	STD_LOGIC_VECTOR (4 downto 0);
 						RF_WrEn 				: in  	STD_LOGIC;
 						WBMuxOut 				: in  	STD_LOGIC_VECTOR (31 downto 0);
---						MEM_out 			: in  	STD_LOGIC_VECTOR (31 downto 0);
+						MEM_out 			: in  	STD_LOGIC_VECTOR (31 downto 0);
 						RF_WrData_sel	: in  	STD_LOGIC;
 						RF_B_sel 				: in  	STD_LOGIC;
 						Reset 					: in  	STD_LOGIC;
 						Clk 						: in  	STD_LOGIC;
-						ImmedIn 				: in  STD_LOGIC_VECTOR (31 downto 0);
+--						ImmedIn 				: in  STD_LOGIC_VECTOR (31 downto 0);
 						ImmedOut			: out  STD_LOGIC_VECTOR (31 downto 0);
 						RF_A 						: out  STD_LOGIC_VECTOR (31 downto 0);
 						RF_B 						: out  STD_LOGIC_VECTOR (31 downto 0));
@@ -111,7 +111,7 @@ architecture Structural of Datapath is
 	end component;
 	
 	signal ForwardASig, ForwardBSig : STD_LOGIC_VECTOR(1 downto 0);
-	signal InstrSig, ALU_out_sig, MEM_out_sig, ImmedSig, RF_A_sig, RF_B_sig, WBMuxOutSig, BusMuxAOut, BusMuxut: STD_LOGIC_VECTOR (31 downto 0);
+	signal InstrSig, ALU_out_sig, MEM_out_sig, ImmedSig, RF_A_sig, RF_B_sig, WBMuxOutSig, BusMuxAOut, BusMuxBOut: STD_LOGIC_VECTOR (31 downto 0);
 	signal IFIDOut: STD_LOGIC_VECTOR(31 downto 0);
 	signal IDEXOut: STD_LOGIC_VECTOR(121 downto 0);
 	signal EXMEMOut: STD_LOGIC_VECTOR(106 downto 0);
@@ -129,20 +129,17 @@ begin
 																										Awr=>MEMWBOut(8 downto 4),
 																										RF_WrEn=>MEMWBOut(0),
 																										WBMuxOut=>WBMuxOutSig,
---																										WBMuxOut=>MEM_out_sig,
---																										MEM_out=>MEMWBOut(104 downto 73),
---																										MEM_out=>MEM_out_sig,
-																										RF_WrData_sel=>MEMWBOut(2),
+																										RF_WrData_sel=>MEMWBOut(1),
 																										RF_B_sel=>RF_B_sel,
 																										Reset=>Reset,
 																										Clk=>Clk,
-																										ImmedIn=>MEMWBOut(40 downto 9),
+																										MEM_out=>MEMWBOut(104 downto 73),
 																										ImmedOut=>ImmedSig,
 																										RF_A=>RF_A_sig,
 																										RF_B=>RF_B_sig);
 
-	ALUSTAGE_0: ALUSTAGE port map( RF_A=>IDEXOut(31 downto 0),
-																										RF_B=>IDEXOut(63 downto 32),
+	ALUSTAGE_0: ALUSTAGE port map( RF_A=>BusMuxAOut,
+																										RF_B=>BusMuxBOut,
 																										Immed=>IDEXOut(106 downto 75),
 																										ALU_Bin_sel=>IDEXOut(68),
 																										ALU_func=>IDEXOut(72 downto 69),
@@ -203,9 +200,10 @@ begin
 																																ForwardB =>ForwardBSig);
 
 	MEMWB_BusMux: BusMux2 port map(input(0)=>MEMWBOut(72 downto 41),	--ALUOut
-																									input(1)=>MEMWBOut(104 downto 73),	--MEMOut
+--																									input(1)=>MEMWBOut(104 downto 73),	--MEMOut
+																									input(1)=>MEMWBOut(40 downto 9),	--MEMOut
 																									output=>WBMuxOutSig,
-																									control=>MEMWBOut(1));
+																									control=>MEMWBOut(2));
 
 	BusMux4A: BusMux4 Port Map( input(0)=>IDEXOut(31 downto 0),
 																					input(1)=>WBMuxOutSig,
@@ -214,11 +212,11 @@ begin
 																					output=>BusMuxAOut,
 																					control=>ForwardASig);
 
-	usMux4: BusMux4 Port Map( input(0)=>IDEXOut(63 downto 32),
-																					input(1)=>EXMEMOut(74 downto 43),
-																					input(2)=>WBMuxOutSig,
+	BusMux4B: BusMux4 Port Map( input(0)=>IDEXOut(63 downto 32),
+																					input(1)=>WBMuxOutSig,
+																					input(2)=>EXMEMOut(74 downto 43),
 																					input(3)=>std_logic_vector(to_unsigned(0,32)),
-																					output=>BusMuxut,
+																					output=>BusMuxBOut,
 																					control=>ForwardBSig);
 
 	RtORRdMuxOut<=IDEXOut(116 downto 112);
