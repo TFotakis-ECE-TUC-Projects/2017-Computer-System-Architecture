@@ -16,11 +16,12 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="20" />
+   <WVObjectSize size="21" />
    <wave_markers>
       <marker time="135000000" label="" />
       <marker time="185000000" label="" />
       <marker time="235000000" label="" />
+      <marker time="355000000" label="" />
    </wave_markers>
    <wvobject fp_name="/testprocessor/reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">reset</obj_property>
@@ -30,10 +31,10 @@
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/output" type="array" db_ref_id="1">
+   <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/dout" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">output[31:0]</obj_property>
-      <obj_property name="ObjectShortName">output[31:0]</obj_property>
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
       <obj_property name="label">Instr</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ff00ff</obj_property>
@@ -196,8 +197,8 @@
          <obj_property name="ObjectShortName">ifidout[31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/idexout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">idexout[121:0]</obj_property>
-         <obj_property name="ObjectShortName">idexout[121:0]</obj_property>
+         <obj_property name="ElementShortName">idexout[127:0]</obj_property>
+         <obj_property name="ObjectShortName">idexout[127:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/exmemout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">exmemout[106:0]</obj_property>
@@ -348,11 +349,6 @@
       <wvobject fp_name="/testprocessor/uut/Datapath_0/DECSTAGE_0/clk" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/Datapath_0/DECSTAGE_0/immedin" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">immedin[31:0]</obj_property>
-         <obj_property name="ObjectShortName">immedin[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/DECSTAGE_0/immedout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">immedout[31:0]</obj_property>
@@ -7874,36 +7870,40 @@
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group1161" type="group">
+   <wvobject fp_name="group1413" type="group">
       <obj_property name="label">IFIDRegister</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/input" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">input[31:0]</obj_property>
-         <obj_property name="ObjectShortName">input[31:0]</obj_property>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/output" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">output[31:0]</obj_property>
-         <obj_property name="ObjectShortName">output[31:0]</obj_property>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/dout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/clk" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">clk</obj_property>
-         <obj_property name="ObjectShortName">clk</obj_property>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/we" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">we</obj_property>
+         <obj_property name="ObjectShortName">we</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/reset" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">reset</obj_property>
          <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group1166" type="group">
       <obj_property name="label">IDEXRegister</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IDEXRegister/input" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">input[121:0]</obj_property>
-         <obj_property name="ObjectShortName">input[121:0]</obj_property>
+         <obj_property name="ElementShortName">input[127:0]</obj_property>
+         <obj_property name="ObjectShortName">input[127:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IDEXRegister/output" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">output[121:0]</obj_property>
-         <obj_property name="ObjectShortName">output[121:0]</obj_property>
+         <obj_property name="ElementShortName">output[127:0]</obj_property>
+         <obj_property name="ObjectShortName">output[127:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IDEXRegister/clk" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">clk</obj_property>
@@ -8842,6 +8842,33 @@
       <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMWB_BusMux/control" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">control</obj_property>
          <obj_property name="ObjectShortName">control</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1407" type="group">
+      <obj_property name="label">HazardDetectionUnit</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/HazardDetectionUnit_0/idex_opcode" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">idex_opcode[5:0]</obj_property>
+         <obj_property name="ObjectShortName">idex_opcode[5:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/HazardDetectionUnit_0/idex_rt" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">idex_rt[4:0]</obj_property>
+         <obj_property name="ObjectShortName">idex_rt[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/HazardDetectionUnit_0/ifid_rs" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ifid_rs[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ifid_rs[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/HazardDetectionUnit_0/ifid_rt" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ifid_rt[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ifid_rt[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/HazardDetectionUnit_0/output" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">output</obj_property>
+         <obj_property name="ObjectShortName">output</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

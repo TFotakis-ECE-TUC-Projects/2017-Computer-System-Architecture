@@ -62,15 +62,24 @@ architecture Structural of Datapath is
 					MEM_Control 		: in 	STD_LOGIC;
 					MEM_DataOut 	: out  STD_LOGIC_VECTOR (31 downto 0));
 	end component;
-	component IFID_Register
-	Port ( input : in  STD_LOGIC_VECTOR (31 downto 0);
-					output : out  STD_LOGIC_VECTOR (31 downto 0);
-					clk : in  STD_LOGIC;
-						reset : in STD_LOGIC);
+--	component IFID_Register
+--	Port ( input : in  STD_LOGIC_VECTOR (31 downto 0);
+--					output : out  STD_LOGIC_VECTOR (31 downto 0);
+--					clk : in  STD_LOGIC;
+--						reset : in STD_LOGIC);
+--	end component;
+
+	component Register32
+		 Port (	data 	: in  	STD_LOGIC_VECTOR (31 downto 0);
+						dout 	: out  STD_LOGIC_VECTOR (31 downto 0);
+						we 	: in  	STD_LOGIC;
+						reset : in  	STD_LOGIC;
+						clk 	: in  	STD_LOGIC);
 	end component;
+	
 	component IDEX_Register
-    Port ( input : in  STD_LOGIC_VECTOR (121 downto 0);
-					output : out  STD_LOGIC_VECTOR (121 downto 0);
+    Port ( input : in  STD_LOGIC_VECTOR (127 downto 0);
+					output : out  STD_LOGIC_VECTOR (127 downto 0);
 					clk : in  STD_LOGIC;
 						reset : in STD_LOGIC);
 	end component;
@@ -110,17 +119,28 @@ architecture Structural of Datapath is
 					control : in  	STD_LOGIC_VECTOR (1 downto 0));
 	end component;
 	
+	component HazardDetectionUnit 
+	Port(	  IDEX_Opcode 		: in  		STD_LOGIC_VECTOR(5 downto 0);
+					  IDEX_Rt 						: in  		STD_LOGIC_VECTOR (4 downto 0);
+					  IFID_Rs 						: in  		STD_LOGIC_VECTOR (4 downto 0);
+					  IFID_Rt 						: in  		STD_LOGIC_VECTOR (4 downto 0);
+					  output 							: out  	STD_LOGIC);
+	end component;
+	
+	signal HazardDetectionUnitOut : STD_LOGIC;
 	signal ForwardASig, ForwardBSig : STD_LOGIC_VECTOR(1 downto 0);
+	signal IDEXControl : STD_LOGIC_VECTOR(10 downto 0);
+	signal IDEXOpcode : STD_LOGIC_VECTOR(5 downto 0);
 	signal InstrSig, ALU_out_sig, MEM_out_sig, ImmedSig, RF_A_sig, RF_B_sig, WBMuxOutSig, BusMuxAOut, BusMuxBOut: STD_LOGIC_VECTOR (31 downto 0);
 	signal IFIDOut: STD_LOGIC_VECTOR(31 downto 0);
-	signal IDEXOut: STD_LOGIC_VECTOR(121 downto 0);
+	signal IDEXOut: STD_LOGIC_VECTOR(127 downto 0);
 	signal EXMEMOut: STD_LOGIC_VECTOR(106 downto 0);
 	signal MEMWBOut: STD_LOGIC_VECTOR(104 downto 0);
 	signal RtORRdMuxOut: STD_LOGIC_VECTOR(4 downto 0);
 begin
 	IFSTAGE_0: IFSTAGE port map(	PC_Immed=>ImmedSig,
 																							PC_Sel=>PC_Sel,
-																							PC_LdEn=>PC_LdEn,
+																							PC_LdEn=>HazardDetectionUnitOut,
 																							Reset=>Reset,
 																							Clk=>Clk,
 																							Instr=>InstrSig);
@@ -129,7 +149,8 @@ begin
 																										Awr=>MEMWBOut(8 downto 4),
 																										RF_WrEn=>MEMWBOut(0),
 																										WBMuxOut=>WBMuxOutSig,
-																										RF_WrData_sel=>MEMWBOut(1),
+--																										RF_WrData_sel=>MEMWBOut(1),
+																										RF_WrData_sel=>'0',
 																										RF_B_sel=>RF_B_sel,
 																										Reset=>Reset,
 																										Clk=>Clk,
@@ -153,21 +174,45 @@ begin
 																											MEM_Control=>EXMEMOut(10),
 																											MEM_DataOut=>MEM_out_sig);
 																											
-	IFIDRegister: 				IFID_Register 				port map(input=>InstrSig, output=>IFIDOut, clk=>Clk, reset=>Reset);
-	
+--	IFIDRegister: 				IFID_Register 				port map(input=>InstrSig, output=>IFIDOut, clk=>Clk, reset=>Reset);
+	IFIDRegister: Register32 Port Map(data=>InstrSig, 
+																									dout=>IFIDOut,
+																									we=>HazardDetectionUnitOut,
+																									reset=>Reset,
+																									clk=>Clk);
+
+	IDEXControl(0)<=RF_WrEn and HazardDetectionUnitOut;
+	IDEXControl(1)<=RF_WrData_sel(0) and HazardDetectionUnitOut;
+	IDEXControl(2)<=RF_WrData_sel(1) and HazardDetectionUnitOut;
+	IDEXControl(3)<=RF_B_sel and HazardDetectionUnitOut;
+	IDEXControl(4)<=ALU_Bin_sel and HazardDetectionUnitOut;
+	IDEXControl(5)<=ALU_func(0) and HazardDetectionUnitOut;
+	IDEXControl(6)<=ALU_func(1) and HazardDetectionUnitOut;
+	IDEXControl(7)<=ALU_func(2) and HazardDetectionUnitOut;
+	IDEXControl(8)<=ALU_func(3) and HazardDetectionUnitOut;
+	IDEXControl(9)<=MEM_WrEn and HazardDetectionUnitOut;
+	IDEXControl(10)<=MEM_Control and HazardDetectionUnitOut;
+	IDEXOpcode(0)<=IFIDOut(26) and HazardDetectionUnitOut;
+	IDEXOpcode(1)<=IFIDOut(27) and HazardDetectionUnitOut;
+	IDEXOpcode(2)<=IFIDOut(28) and HazardDetectionUnitOut;
+	IDEXOpcode(3)<=IFIDOut(29) and HazardDetectionUnitOut;
+	IDEXOpcode(4)<=IFIDOut(30) and HazardDetectionUnitOut;
+	IDEXOpcode(5)<=IFIDOut(31) and HazardDetectionUnitOut;
 	IDEXRegister: 				IDEX_Register 			port map(input(31 downto 0)=>RF_A_sig,
 																																		input(63 downto 32)=>RF_B_sig,
-																																		input(64)=>RF_WrEn,
-																																		input(66 downto 65)=>RF_WrData_sel,
-																																		input(67)=>RF_B_sel,
-																																		input(68)=>ALU_Bin_sel,
-																																		input(72 downto 69)=>ALU_func,
-																																		input(73)=>MEM_WrEn,
-																																		input(74)=>MEM_Control,
+																																		input(74 downto 64)=>IDEXControl,
+--																																		input(64)=>RF_WrEn,
+--																																		input(66 downto 65)=>RF_WrData_sel,
+--																																		input(67)=>RF_B_sel,
+--																																		input(68)=>ALU_Bin_sel,
+--																																		input(72 downto 69)=>ALU_func,
+--																																		input(73)=>MEM_WrEn,
+--																																		input(74)=>MEM_Control,
 																																		input(106 downto 75)=>ImmedSig,
 																																		input(111 downto 107)=>IFIDOut(15 downto 11),	--Rt
 																																		input(116 downto 112)=>IFIDOut(20 downto 16),	--Rd
 																																		input(121 downto 117)=>IFIDOut(25 downto 21),	--Rs
+																																		input(127 downto 122)=>IDEXOpcode,	--Opcode
 																																		output=>IDEXOut, clk=>Clk, reset=>Reset);
 																																		
 	EXMEMRegister: 	EXMEM_Register 	port map(input(0)=>IDEXOut(64),	--RF_WrEn
@@ -199,25 +244,33 @@ begin
 																																ForwardA =>ForwardASig,
 																																ForwardB =>ForwardBSig);
 
-	MEMWB_BusMux: BusMux2 port map(input(0)=>MEMWBOut(72 downto 41),	--ALUOut
---																									input(1)=>MEMWBOut(104 downto 73),	--MEMOut
-																									input(1)=>MEMWBOut(40 downto 9),	--MEMOut
-																									output=>WBMuxOutSig,
-																									control=>MEMWBOut(2));
+	MEMWB_BusMux: BusMux4 port map(	input(0)=>MEMWBOut(72 downto 41),	--ALUOut
+																												input(1)=>MEMWBOut(40 downto 9),	--ImmedSig
+																												input(2)=>MEMWBOut(104 downto 73),	--MEMOut
+																												input(3)=>std_logic_vector(to_unsigned(0,32)),
+																												output=>WBMuxOutSig,
+																												control(0)=>MEMWBOut(2),
+																												control(1)=>MEMWBOut(1));
 
-	BusMux4A: BusMux4 Port Map( input(0)=>IDEXOut(31 downto 0),
-																					input(1)=>WBMuxOutSig,
-																					input(2)=>EXMEMOut(74 downto 43),
-																					input(3)=>std_logic_vector(to_unsigned(0,32)),
-																					output=>BusMuxAOut,
-																					control=>ForwardASig);
+	BusMux4A: BusMux4 Port Map(input(0)=>IDEXOut(31 downto 0),
+																							input(1)=>WBMuxOutSig,
+																							input(2)=>EXMEMOut(74 downto 43),
+																							input(3)=>std_logic_vector(to_unsigned(0,32)),
+																							output=>BusMuxAOut,
+																							control=>ForwardASig);
 
-	BusMux4B: BusMux4 Port Map( input(0)=>IDEXOut(63 downto 32),
-																					input(1)=>WBMuxOutSig,
-																					input(2)=>EXMEMOut(74 downto 43),
-																					input(3)=>std_logic_vector(to_unsigned(0,32)),
-																					output=>BusMuxBOut,
-																					control=>ForwardBSig);
+	BusMux4B: BusMux4 Port Map( 	input(0)=>IDEXOut(63 downto 32),
+																								input(1)=>WBMuxOutSig,
+																								input(2)=>EXMEMOut(74 downto 43),
+																								input(3)=>std_logic_vector(to_unsigned(0,32)),
+																								output=>BusMuxBOut,
+																								control=>ForwardBSig);
+
+HazardDetectionUnit_0: HazardDetectionUnit Port Map (IDEX_Opcode=>IDEXOut(127 downto 122),
+																																						  IDEX_Rt=>IDEXOut(116 downto 112),
+																																						  IFID_Rs=>IFIDOut(25 downto 21),
+																																						  IFID_Rt=>IFIDOut(15 downto 11),
+																																						  output=>HazardDetectionUnitOut);
 
 	RtORRdMuxOut<=IDEXOut(116 downto 112);
 	Instr<= IFIDOut;
