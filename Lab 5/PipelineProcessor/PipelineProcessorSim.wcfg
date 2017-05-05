@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="24" />
    <wave_markers>
       <marker time="135000000" label="" />
       <marker time="185000000" label="" />
@@ -28,8 +28,10 @@
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
    <wvobject fp_name="/testprocessor/clk" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+      <obj_property name="label">clk</obj_property>
    </wvobject>
    <wvobject fp_name="/testprocessor/uut/Datapath_0/IFIDRegister/dout" type="array" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
@@ -38,6 +40,11 @@
       <obj_property name="label">Instr</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/Datapath_0/IFSTAGE_0/pcout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pcout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcout[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="group1221" type="group">
       <obj_property name="label">Processor</obj_property>
@@ -197,16 +204,16 @@
          <obj_property name="ObjectShortName">ifidout[31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/idexout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">idexout[127:0]</obj_property>
-         <obj_property name="ObjectShortName">idexout[127:0]</obj_property>
+         <obj_property name="ElementShortName">idexout[129:0]</obj_property>
+         <obj_property name="ObjectShortName">idexout[129:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/exmemout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">exmemout[106:0]</obj_property>
-         <obj_property name="ObjectShortName">exmemout[106:0]</obj_property>
+         <obj_property name="ElementShortName">exmemout[108:0]</obj_property>
+         <obj_property name="ObjectShortName">exmemout[108:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/memwbout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">memwbout[104:0]</obj_property>
-         <obj_property name="ObjectShortName">memwbout[104:0]</obj_property>
+         <obj_property name="ElementShortName">memwbout[106:0]</obj_property>
+         <obj_property name="ObjectShortName">memwbout[106:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/rtorrdmuxout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">rtorrdmuxout[4:0]</obj_property>
@@ -299,18 +306,22 @@
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IFSTAGE_0/muxout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">muxout[31:0]</obj_property>
          <obj_property name="ObjectShortName">muxout[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IFSTAGE_0/pcout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">pcout[31:0]</obj_property>
          <obj_property name="ObjectShortName">pcout[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IFSTAGE_0/pc_plus_4_out" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">pc_plus_4_out[31:0]</obj_property>
          <obj_property name="ObjectShortName">pc_plus_4_out[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IFSTAGE_0/pc_plus_imm_out" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">pc_plus_imm_out[31:0]</obj_property>
          <obj_property name="ObjectShortName">pc_plus_imm_out[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group1196" type="group">
@@ -466,6 +477,20 @@
          <obj_property name="ElementShortName">mem_dataout_sig[31:0]</obj_property>
          <obj_property name="ObjectShortName">mem_dataout_sig[31:0]</obj_property>
       </wvobject>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMSTAGE_0/Data_MEM_0/ram[2]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">ram[2]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMSTAGE_0/Data_MEM_0/ram[4]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[4]</obj_property>
+      <obj_property name="ObjectShortName">ram[4]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="group136" type="group">
       <obj_property name="label">RF</obj_property>
@@ -7898,12 +7923,12 @@
       <obj_property name="label">IDEXRegister</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IDEXRegister/input" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">input[127:0]</obj_property>
-         <obj_property name="ObjectShortName">input[127:0]</obj_property>
+         <obj_property name="ElementShortName">input[129:0]</obj_property>
+         <obj_property name="ObjectShortName">input[129:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IDEXRegister/output" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">output[127:0]</obj_property>
-         <obj_property name="ObjectShortName">output[127:0]</obj_property>
+         <obj_property name="ElementShortName">output[129:0]</obj_property>
+         <obj_property name="ObjectShortName">output[129:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/IDEXRegister/clk" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">clk</obj_property>
@@ -7918,13 +7943,13 @@
       <obj_property name="label">EXMEMRegister</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/EXMEMRegister/input" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">input[106:0]</obj_property>
-         <obj_property name="ObjectShortName">input[106:0]</obj_property>
+         <obj_property name="ElementShortName">input[108:0]</obj_property>
+         <obj_property name="ObjectShortName">input[108:0]</obj_property>
          <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/EXMEMRegister/output" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">output[106:0]</obj_property>
-         <obj_property name="ObjectShortName">output[106:0]</obj_property>
+         <obj_property name="ElementShortName">output[108:0]</obj_property>
+         <obj_property name="ObjectShortName">output[108:0]</obj_property>
          <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="vbus1477" type="vbus" db_ref_id="1">
@@ -8408,12 +8433,12 @@
       <obj_property name="label">MEMWBRegister</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMWBRegister/input" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">input[104:0]</obj_property>
-         <obj_property name="ObjectShortName">input[104:0]</obj_property>
+         <obj_property name="ElementShortName">input[106:0]</obj_property>
+         <obj_property name="ObjectShortName">input[106:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMWBRegister/output" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">output[104:0]</obj_property>
-         <obj_property name="ObjectShortName">output[104:0]</obj_property>
+         <obj_property name="ElementShortName">output[106:0]</obj_property>
+         <obj_property name="ObjectShortName">output[106:0]</obj_property>
       </wvobject>
       <wvobject fp_name="vbus1393" type="vbus" db_ref_id="1">
          <obj_property name="label">RF_WrEn</obj_property>
@@ -8830,8 +8855,8 @@
       <obj_property name="label">MEMWB_BuxMux</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMWB_BusMux/input" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">input[1:0]</obj_property>
-         <obj_property name="ObjectShortName">input[1:0]</obj_property>
+         <obj_property name="ElementShortName">input[3:0]</obj_property>
+         <obj_property name="ObjectShortName">input[3:0]</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMWB_BusMux/output" type="array" db_ref_id="1">
@@ -8839,9 +8864,9 @@
          <obj_property name="ObjectShortName">output[31:0]</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMWB_BusMux/control" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">control</obj_property>
-         <obj_property name="ObjectShortName">control</obj_property>
+      <wvobject fp_name="/testprocessor/uut/Datapath_0/MEMWB_BusMux/control" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">control[1:0]</obj_property>
+         <obj_property name="ObjectShortName">control[1:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group1407" type="group">
