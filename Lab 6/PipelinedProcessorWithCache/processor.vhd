@@ -29,12 +29,13 @@ component IFSTAGE
 						PC_LdEn : in  STD_LOGIC;
 						Reset : in  STD_LOGIC;
 						Clk : in  STD_LOGIC;
-						Instr : out  STD_LOGIC_VECTOR (31 downto 0));
+						Instr : out  STD_LOGIC_VECTOR (31 downto 0);
+						Addr: out  STD_LOGIC_VECTOR (31 downto 0));
 end component;
 
 component IFID_Register
-    Port ( 	input : in  STD_LOGIC_VECTOR (31 downto 0);
-						output : out  STD_LOGIC_VECTOR (31 downto 0);
+    Port ( 	input : in  STD_LOGIC_VECTOR (63 downto 0);
+						output : out  STD_LOGIC_VECTOR (63 downto 0);
 						clk : in  STD_LOGIC;
 						reset : in STD_LOGIC);
 end component;
@@ -52,9 +53,15 @@ component DECSTAGE
 					RF_B 						: out  STD_LOGIC_VECTOR (31 downto 0));
 end component;
 
+component WrongAddressControl
+    Port ( 	input : in  STD_LOGIC_VECTOR (21 downto 0);
+						Instr : in  STD_LOGIC_VECTOR (31 downto 0);
+						output : out  STD_LOGIC);
+end component;
+
 component IDEX_Register is
-    Port ( 	input : in  STD_LOGIC_VECTOR (135 downto 0);
-						output : out  STD_LOGIC_VECTOR (135 downto 0);
+    Port ( 	input : in  STD_LOGIC_VECTOR (167 downto 0);
+						output : out  STD_LOGIC_VECTOR (167 downto 0);
 						clk : in  STD_LOGIC;
 						reset : in STD_LOGIC);
 end component;
@@ -70,8 +77,8 @@ component ALUSTAGE
 end component;
 
 component EXDF_Register
-    Port ( 	input : in  STD_LOGIC_VECTOR (98 downto 0);
-						output : out  STD_LOGIC_VECTOR (98 downto 0);
+    Port ( 	input : in  STD_LOGIC_VECTOR (99 downto 0);
+						output : out  STD_LOGIC_VECTOR (99 downto 0);
 						clk : in  STD_LOGIC;
 						reset : in STD_LOGIC);
 end component;
@@ -86,8 +93,8 @@ component Cache
 end component;
 
 component DFTC_Register
-    Port ( 	input : in  STD_LOGIC_VECTOR (134 downto 0);
-						output : out  STD_LOGIC_VECTOR (134 downto 0);
+    Port ( 	input : in  STD_LOGIC_VECTOR (135 downto 0);
+						output : out  STD_LOGIC_VECTOR (135 downto 0);
 						clk : in  STD_LOGIC;
 						reset : in STD_LOGIC);
 end component;
@@ -105,19 +112,21 @@ component BusMux4
 					control : in  	STD_LOGIC_VECTOR (1 downto 0));
 end component;
 
-signal PC_sel_sig, RF_WrEn_sig, RF_B_sel_sig, ALU_Bin_sel_sig, UnknownOpCode_sig, HazardOut, ID_RF_WrEn_sig, EX_RF_WrEn_sig, TC_RF_WrEn_sig, ValidSig, HitSig: STD_LOGIC;
+signal PC_sel_sig, RF_WrEn_sig, RF_B_sel_sig, ALU_Bin_sel_sig, UnknownOpCode_sig, ID_RF_WrEn_sig, EX_RF_WrEn_sig, TC_RF_WrEn_sig, ValidSig, HitSig, WrongAddrOut: STD_LOGIC;
 signal RF_WrData_sel_sig : STD_LOGIC_VECTOR(1 downto 0);
 signal TagSig :STD_LOGIC_VECTOR(2 downto 0);
 signal ALU_func_sig: STD_LOGIC_VECTOR(3 downto 0);
-signal InstrSig, PC_Immed_sig, IFIDOut, ImmedSig, RF_A_sig, RF_B_sig, ALU_out_sig, CacheOut, WBData: STD_LOGIC_VECTOR (31 downto 0);
-signal EXDFOut : STD_LOGIC_VECTOR(98 downto 0);
-signal DFTCOut : STD_LOGIC_VECTOR(134 downto 0);
-signal IDEXOut : STD_LOGIC_VECTOR(135 downto 0);
+signal CauseRegister: STD_LOGIC_VECTOR(7 downto 0);
+signal InstrSig, PC_Immed_sig, PCAddr, ImmedSig, RF_A_sig, RF_B_sig, ALU_out_sig, CacheOut, WBData, EPC: STD_LOGIC_VECTOR (31 downto 0);
+signal IFIDOut : STD_LOGIC_VECTOR(63 downto 0);
+signal EXDFOut : STD_LOGIC_VECTOR(99 downto 0);
+signal DFTCOut : STD_LOGIC_VECTOR(135 downto 0);
+signal IDEXOut : STD_LOGIC_VECTOR(167 downto 0);
 signal TCWBOut : STD_LOGIC_VECTOR(103 downto 0);
 
 begin
 
-control_0: CONTROL port map(	Instr=>IFIDOut,
+control_0: CONTROL port map(	Instr=>IFIDOut(31 downto 0),
 																						Reset=>reset,
 																						Clk=>clk,
 																						PC_sel=>PC_sel_sig,
@@ -130,19 +139,21 @@ control_0: CONTROL port map(	Instr=>IFIDOut,
 																						
 IFSTAGE_0: IFSTAGE port map( PC_Immed=>PC_Immed_sig,
 																						PC_Sel=>PC_sel_sig,
-																						PC_LdEn=>HazardOut,
+																						PC_LdEn=>'1',
 																						Reset=>reset,
 																						Clk=>clk,
-																						Instr=>InstrSig);
+																						Instr=>InstrSig,
+																						Addr=>PCAddr);
 
 
 IFIDRegister: IFID_Register
-    Port map( 	input=>InstrSig,
+    Port map( 	input(31 downto 0)=>InstrSig,
+									input(63 downto 32)=>PCAddr,
 									output=>IFIDOut,
 									clk=>clk,
 									reset=>reset);
 									
-DECSTAGE_0: DECSTAGE port map(Instr=>IFIDOut,
+DECSTAGE_0: DECSTAGE port map(Instr=>IFIDOut(31 downto 0),
 																									Awr=>TCWBOut(103 downto 99),
 																									RF_WrEn=>TCWBOut(96),
 																									Data=>WBData,
@@ -153,10 +164,24 @@ DECSTAGE_0: DECSTAGE port map(Instr=>IFIDOut,
 																									RF_A=>RF_A_sig,
 																									RF_B=>RF_B_sig);
 
-ID_RF_WrEn_sig<=(RF_WrEn_sig and not HazardOut) or (RF_WrEn_sig and HazardOut);
+ID_RF_WrEn_sig<=(RF_WrEn_sig and not UnknownOpCode_sig);
+
+process(WrongAddrOut, UnknownOpCode_sig, clk, IFIDOut, IDEXOut)
+begin
+	if(UnknownOpCode_sig='1' and IFIDOut(31 downto 0) = std_logic_vector(to_unsigned(0,31))) then
+		CauseRegister<="00001111";
+		EPC<=IFIDOut(63 downto 32);
+	elsif(WrongAddrOut='1' and IDEXOut(31 downto 0) = std_logic_vector(to_unsigned(0,31))) then
+		CauseRegister<="11110000";
+		EPC<=IDEXOut(167 downto 136);
+	else
+		CauseRegister<=std_logic_vector(to_unsigned(0,8));
+		EPC<=std_logic_vector(to_unsigned(0,31));
+	end if;
+end process;
 
 IDEXRegister: IDEX_Register
-    Port map( 	input(31 downto 0)=>IFIDOut,--Instr
+    Port map( 	input(31 downto 0)=>IFIDOut(31 downto 0),--Instr
 									input(63 downto 32)=>RF_A_sig,
 									input(95 downto 64)=>RF_B_sig,
 									input(127 downto 96)=>ImmedSig,
@@ -164,6 +189,7 @@ IDEXRegister: IDEX_Register
 									input(130 downto 129)=>RF_WrData_sel_sig,
 									input(131)=>ALU_Bin_sel_sig,
 									input(135 downto 132)=>ALU_func_sig,
+									input(167 downto 136)=>IFIDOut(63 downto 32), --PCAddr
 									output=>IDEXOut,
 									clk=>clk,
 									reset=>reset);
@@ -175,13 +201,19 @@ ALUSTAGE_0: ALUSTAGE Port map (RF_A=>IDEXOut(63 downto 32),
 																									ALU_func=>IDEXOut(135 downto 132),
 																									ALU_out=>ALU_out_sig);
 
-EX_RF_WrEn_sig<=(RF_WrEn_sig and not HazardOut) or (RF_WrEn_sig and HazardOut);----------------------------------PROSOXIIIIIIIIIIIIIII---------------------------
+WrongAddr: WrongAddressControl Port map(input=>ALU_out_sig(31 downto 10),
+																															Instr=>IDEXOut(31 downto 0),
+																															output=>WrongAddrOut);
+
+
+EX_RF_WrEn_sig<=(IDEXOut(128) and not WrongAddrOut);
 
 EXDFRegister: EXDF_Register port map(	input(31 downto 0)=>IDEXOut(31 downto 0),--Instr
 																												input(63 downto 32)=>ALU_out_sig,
 																												input(95 downto 64)=>IDEXOut(127 downto 96),--Immed
 																												input(96)=>EX_RF_WrEn_sig,
 																												input(98 downto 97)=>IDEXOut(130 downto 129),--RF_WrData_sel
+																												input(99)=>WrongAddrOut,
 																												output=>EXDFOut,
 																												clk=>clk,
 																												reset=>reset);
@@ -202,11 +234,12 @@ DFTCRegister: DFTC_Register
 									input(99)=>ValidSig,
 									input(102 downto 100)=>TagSig,
 									input(134 downto 103)=>CacheOut,
+									input(135)=>EXDFOut(99),
 									output=>DFTCOut,
 									clk=>clk,
 									reset=>reset);
 
-HitSig<=(DFTCOut(41) xor DFTCOut(100)) and (DFTCOut(42) xor DFTCOut(101)) and (DFTCOut(43) xor DFTCOut(102)) and DFTCOut(99);
+HitSig<=((DFTCOut(41) xor DFTCOut(100)) and (DFTCOut(42) xor DFTCOut(101)) and (DFTCOut(43) xor DFTCOut(102)) and DFTCOut(99)) and DFTCOut(135);
 
 TC_RF_WrEn_sig<=(((not DFTCOut(31)) and (not DFTCOut(30)) and DFTCOut(29) and DFTCOut(28) and DFTCOut(27) and DFTCOut(26)) and HitSig and DFTCOut(96)) or
 													(not((not DFTCOut(31)) and (not DFTCOut(30)) and DFTCOut(29) and DFTCOut(28) and DFTCOut(27) and DFTCOut(26)) and DFTCOut(96));
@@ -223,9 +256,9 @@ TCWBRegister: TCWB_Register Port map(  input(31 downto 0)=>DFTCOut(134 downto 10
 																													clk=>clk,
 																													reset=>reset);
 
-BusMux4_0: BusMux4 port map(	input(0)=>TCWBOut(63 downto 32),
-																							input(1)=>TCWBOut(95 downto 64),
-																							input(2)=>TCWBOut(31 downto 0),
+BusMux4_0: BusMux4 port map(	input(0)=>TCWBOut(63 downto 32),	--ALUOut
+																							input(1)=>TCWBOut(95 downto 64),	--Immed
+																							input(2)=>TCWBOut(31 downto 0),	--Cache
 																							input(3)=>std_logic_vector(to_unsigned(0,32)),
 																							output=>WBData,
 																							control=>TCWBOut(98 downto 97));

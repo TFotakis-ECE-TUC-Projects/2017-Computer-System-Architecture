@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/tzanis/Workspace/Xilinx/TUC-Computer-System-Architecture-1/Lab 6/ProcessoWithCache/TestProcessor_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="/home/tzanis/Workspace/Xilinx/TUC-Computer-System-Architecture-1/Lab 6/PipelinedProcessorWithCache/TestProcessor_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="bus32pkg" />
             <top_module name="numeric_std" />
@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="4" />
+   <WVObjectSize size="9" />
    <wvobject fp_name="/testprocessor/reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -37,192 +37,543 @@
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">0</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(1)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">1</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(2)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">2</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(3)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">3</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(4)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">4</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(5)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">5</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(6)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">6</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(7)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">7</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(8)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">8</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(9)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">9</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(10)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">10</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(11)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">11</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(12)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">12</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(13)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">13</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(14)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">14</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(15)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">15</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(16)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">16</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(17)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">17</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(18)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">18</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(19)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">19</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(20)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">20</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(21)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">21</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(22)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">22</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(23)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">23</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(24)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">24</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(25)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">25</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(26)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">26</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(27)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">27</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(28)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">28</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(29)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">29</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(30)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">30</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(31)\/register32_i/dout" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">dout[31:0]</obj_property>
          <obj_property name="ObjectShortName">dout[31:0]</obj_property>
          <obj_property name="label">31</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group73" type="group">
+      <obj_property name="label">Processor</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/miss" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">miss</obj_property>
+         <obj_property name="ObjectShortName">miss</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/pc_sel_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_sel_sig</obj_property>
+         <obj_property name="ObjectShortName">pc_sel_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/rf_wren_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_wren_sig</obj_property>
+         <obj_property name="ObjectShortName">rf_wren_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/rf_b_sel_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b_sel_sig</obj_property>
+         <obj_property name="ObjectShortName">rf_b_sel_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/alu_bin_sel_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_bin_sel_sig</obj_property>
+         <obj_property name="ObjectShortName">alu_bin_sel_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/unknownopcode_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">unknownopcode_sig</obj_property>
+         <obj_property name="ObjectShortName">unknownopcode_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/id_rf_wren_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">id_rf_wren_sig</obj_property>
+         <obj_property name="ObjectShortName">id_rf_wren_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ex_rf_wren_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">ex_rf_wren_sig</obj_property>
+         <obj_property name="ObjectShortName">ex_rf_wren_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/tc_rf_wren_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">tc_rf_wren_sig</obj_property>
+         <obj_property name="ObjectShortName">tc_rf_wren_sig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/validsig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">validsig</obj_property>
+         <obj_property name="ObjectShortName">validsig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/hitsig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">hitsig</obj_property>
+         <obj_property name="ObjectShortName">hitsig</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/wrongaddrout" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">wrongaddrout</obj_property>
+         <obj_property name="ObjectShortName">wrongaddrout</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/rf_wrdata_sel_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_wrdata_sel_sig[1:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_wrdata_sel_sig[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/tagsig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">tagsig[2:0]</obj_property>
+         <obj_property name="ObjectShortName">tagsig[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/alu_func_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_func_sig[3:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_func_sig[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/causeregister" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">causeregister[7:0]</obj_property>
+         <obj_property name="ObjectShortName">causeregister[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/instrsig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">instrsig[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instrsig[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/pc_immed_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_immed_sig[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_immed_sig[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/pcaddr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pcaddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pcaddr[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/immedsig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">immedsig[31:0]</obj_property>
+         <obj_property name="ObjectShortName">immedsig[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/rf_a_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_a_sig[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_a_sig[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/rf_b_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b_sig[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_b_sig[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/alu_out_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_out_sig[31:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_out_sig[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/cacheout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">cacheout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cacheout[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/wbdata" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wbdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">wbdata[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/epc" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">epc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">epc[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ifidout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ifidout[63:0]</obj_property>
+         <obj_property name="ObjectShortName">ifidout[63:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/exdfout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">exdfout[99:0]</obj_property>
+         <obj_property name="ObjectShortName">exdfout[99:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/dftcout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dftcout[135:0]</obj_property>
+         <obj_property name="ObjectShortName">dftcout[135:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/idexout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">idexout[167:0]</obj_property>
+         <obj_property name="ObjectShortName">idexout[167:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/tcwbout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">tcwbout[103:0]</obj_property>
+         <obj_property name="ObjectShortName">tcwbout[103:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group78" type="group">
+      <obj_property name="label">WBMux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/BusMux4_0/input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input[3:0]</obj_property>
+         <obj_property name="ObjectShortName">input[3:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/BusMux4_0/output" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">output[31:0]</obj_property>
+         <obj_property name="ObjectShortName">output[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/BusMux4_0/control" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">control[1:0]</obj_property>
+         <obj_property name="ObjectShortName">control[1:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group95" type="group">
+      <obj_property name="label">DECSTAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/awr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">awr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">awr[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_wren" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_wren</obj_property>
+         <obj_property name="ObjectShortName">rf_wren</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b_sel</obj_property>
+         <obj_property name="ObjectShortName">rf_b_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/immedout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">immedout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">immedout[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_a" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_a[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_a[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_b[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b_addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_b_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/immedsig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">immedsig[31:0]</obj_property>
+         <obj_property name="ObjectShortName">immedsig[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group106" type="group">
+      <obj_property name="label">Control</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/control_0/instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/pc_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_sel</obj_property>
+         <obj_property name="ObjectShortName">pc_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/rf_wren" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_wren</obj_property>
+         <obj_property name="ObjectShortName">rf_wren</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/rf_wrdata_sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_wrdata_sel[1:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_wrdata_sel[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/rf_b_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b_sel</obj_property>
+         <obj_property name="ObjectShortName">rf_b_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/alu_bin_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_bin_sel</obj_property>
+         <obj_property name="ObjectShortName">alu_bin_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/alu_func" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_func[3:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_func[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/control_0/unknownopcode" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">unknownopcode</obj_property>
+         <obj_property name="ObjectShortName">unknownopcode</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group118" type="group">
+      <obj_property name="label">IFSTAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_immed" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_immed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_immed[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_sel</obj_property>
+         <obj_property name="ObjectShortName">pc_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_lden" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_lden</obj_property>
+         <obj_property name="ObjectShortName">pc_lden</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/muxout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">muxout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">muxout[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pcout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pcout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pcout[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_plus_4_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_plus_4_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_plus_4_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_plus_imm_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_plus_imm_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_plus_imm_out[31:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

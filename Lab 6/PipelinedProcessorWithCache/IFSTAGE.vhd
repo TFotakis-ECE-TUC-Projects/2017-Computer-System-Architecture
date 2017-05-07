@@ -8,7 +8,8 @@ entity IFSTAGE is
 					PC_LdEn : in  STD_LOGIC;
 					Reset : in  STD_LOGIC;
 					Clk : in  STD_LOGIC;
-					Instr : out  STD_LOGIC_VECTOR (31 downto 0));
+					Instr : out  STD_LOGIC_VECTOR (31 downto 0);
+					Addr: out  STD_LOGIC_VECTOR (31 downto 0));
 end IFSTAGE;
 
 architecture Structural of IFSTAGE is
@@ -50,4 +51,5 @@ begin
 	PC_plus_4: Addition port map(A=>PCout, B=>std_logic_vector(to_unsigned(4,32)), CarryIn=>'0', output=>PC_plus_4_out);
 	PC_plus_Imm: Addition port map(A=>PC_plus_4_out, B=>PC_Immed, CarryIn=>'0', output=>PC_plus_Imm_out);
 	BusMux2_0: BusMux2 port map(input(0)=>PC_plus_4_out, input(1)=>PC_plus_Imm_out, output=>muxOut, control=>PC_Sel);
+	Addr<=PCout;
 end Structural;

@@ -19,12 +19,25 @@ architecture Behavioral of CONTROL is
 	--100000 0000 add
 	--111000 li
 	--101010 jump_epc
-	with Instr(31 downto 26) select
-		UnknownOpCode<= '0' when "001111",	--lw
-																'0' when "100000", 	--RType
-																'0' when "111000",	--li
-																'0' when "101010",	--jump_epc
-																'1' when others;
+	process(Instr, clk)
+	begin
+		if(	Instr=std_logic_vector(to_unsigned(0,31)) or --nop
+				Instr(31 downto 26)="001111" or 	--lw
+				Instr(31 downto 26)="100000" or 	--RType
+				Instr(31 downto 26)="111000" or	--li
+				Instr(31 downto 26)="101010") then --jump_epc
+				UnknownOpCode<= '0';
+		else
+			UnknownOpCode<= '1';
+		end if;
+	end process;
+--	
+--	with Instr(31 downto 26) select
+--		UnknownOpCode<= '0' when "001111",	--lw
+--																'0' when "100000", 	--RType
+--																'0' when "111000",	--li
+--																'0' when "101010",	--jump_epc
+--																'1' when others;
 
 	with Instr(31 downto 26) select
 		PC_sel <=	
@@ -35,8 +48,8 @@ architecture Behavioral of CONTROL is
 											'1' when "001111",	--lw
 											'0' when others;
 	with Instr(31 downto 26) select
-		RF_WrData_sel <= 	"10" when "111000",	--li
-															"01" when "001111",	--lw
+		RF_WrData_sel <= 	"01" when "111000",	--li
+															"10" when "001111",	--lw
 															"00" when others;
 	with Instr(31 downto 26) select
 		RF_B_sel <= 	'1' when "001111",	--lw
