@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/tzanis/Workspace/Xilinx/TUC-Computer-System-Architecture-1/Lab 6/PipelinedProcessorWithCache/TestProcessor_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="C:/Workspace/Xilinx/TUC-Computer-System-Architecture-1/Lab 6/PipelinedProcessorWithCache/TestProcessor_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="bus32pkg" />
             <top_module name="numeric_std" />
@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="28" />
    <wvobject fp_name="/testprocessor/reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -25,9 +25,329 @@
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
+   <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(31)\/register32_i/dout" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      <obj_property name="label">31</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/hitsig" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hitsig</obj_property>
+      <obj_property name="ObjectShortName">hitsig</obj_property>
+   </wvobject>
    <wvobject fp_name="/testprocessor/miss" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">miss</obj_property>
       <obj_property name="ObjectShortName">miss</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus503" type="vbus" db_ref_id="1">
+      <obj_property name="label">ALU Tag</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[43]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[43]</obj_property>
+         <obj_property name="ObjectShortName">output[43]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[42]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[42]</obj_property>
+         <obj_property name="ObjectShortName">output[42]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[41]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[41]</obj_property>
+         <obj_property name="ObjectShortName">output[41]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/Cache_0/tag" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tag[2:0]</obj_property>
+      <obj_property name="ObjectShortName">tag[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/Cache_0/valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus467" type="vbus" db_ref_id="1">
+      <obj_property name="label">DFTC_Instr</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[31]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">output[31]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[30]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">output[30]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[29]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">output[29]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[28]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">output[28]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[27]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">output[27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[26]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">output[26]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[25]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[25]</obj_property>
+         <obj_property name="ObjectShortName">output[25]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[24]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[24]</obj_property>
+         <obj_property name="ObjectShortName">output[24]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[23]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[23]</obj_property>
+         <obj_property name="ObjectShortName">output[23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[22]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[22]</obj_property>
+         <obj_property name="ObjectShortName">output[22]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[21]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">output[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[20]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">output[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[19]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">output[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[18]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">output[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[17]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">output[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[16]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">output[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[15]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">output[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[14]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">output[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[13]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">output[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[12]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">output[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[11]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">output[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[10]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">output[10]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[9]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">output[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[8]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">output[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[7]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">output[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[6]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">output[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[5]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">output[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[4]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">output[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">output[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">output[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">output[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">output[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus469" type="vbus" db_ref_id="1">
+      <obj_property name="label">InstrOut</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[31]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">output[31]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[30]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">output[30]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[29]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">output[29]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[28]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">output[28]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[27]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">output[27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[26]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">output[26]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[25]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[25]</obj_property>
+         <obj_property name="ObjectShortName">output[25]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[24]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[24]</obj_property>
+         <obj_property name="ObjectShortName">output[24]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[23]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[23]</obj_property>
+         <obj_property name="ObjectShortName">output[23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[22]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[22]</obj_property>
+         <obj_property name="ObjectShortName">output[22]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[21]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">output[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[20]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">output[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[19]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">output[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[18]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">output[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[17]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">output[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[16]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">output[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[15]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">output[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[14]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">output[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[13]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">output[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[12]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">output[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[11]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">output[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[10]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">output[10]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[9]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">output[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[8]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">output[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[7]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">output[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[6]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">output[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[5]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">output[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[4]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">output[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[3]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">output[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[2]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">output[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[1]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">output[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[0]" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">output[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/unknownopcode_sig" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">unknownopcode_sig</obj_property>
+      <obj_property name="ObjectShortName">unknownopcode_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/wrongaddrout" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wrongaddrout</obj_property>
+      <obj_property name="ObjectShortName">wrongaddrout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/causeregister" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">causeregister[7:0]</obj_property>
+      <obj_property name="ObjectShortName">causeregister[7:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testprocessor/uut/epc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">epc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">epc[31:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="group39" type="group">
       <obj_property name="label">RF</obj_property>
@@ -249,15 +569,8 @@
          <obj_property name="label">30</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/RegisterFile_0/\register32gen(31)\/register32_i/dout" type="array" db_ref_id="1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">dout[31:0]</obj_property>
-         <obj_property name="ObjectShortName">dout[31:0]</obj_property>
-         <obj_property name="label">31</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
    </wvobject>
-   <wvobject fp_name="group73" type="group">
+   <wvobject fp_name="group146" type="group">
       <obj_property name="label">Processor</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/testprocessor/uut/reset" type="logic" db_ref_id="1">
@@ -272,9 +585,9 @@
          <obj_property name="ElementShortName">miss</obj_property>
          <obj_property name="ObjectShortName">miss</obj_property>
       </wvobject>
-      <wvobject fp_name="/testprocessor/uut/pc_sel_sig" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">pc_sel_sig</obj_property>
-         <obj_property name="ObjectShortName">pc_sel_sig</obj_property>
+      <wvobject fp_name="/testprocessor/uut/pc_sel_control_sig" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_sel_control_sig</obj_property>
+         <obj_property name="ObjectShortName">pc_sel_control_sig</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/rf_wren_sig" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">rf_wren_sig</obj_property>
@@ -287,10 +600,6 @@
       <wvobject fp_name="/testprocessor/uut/alu_bin_sel_sig" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">alu_bin_sel_sig</obj_property>
          <obj_property name="ObjectShortName">alu_bin_sel_sig</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/unknownopcode_sig" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">unknownopcode_sig</obj_property>
-         <obj_property name="ObjectShortName">unknownopcode_sig</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/id_rf_wren_sig" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">id_rf_wren_sig</obj_property>
@@ -308,17 +617,13 @@
          <obj_property name="ElementShortName">validsig</obj_property>
          <obj_property name="ObjectShortName">validsig</obj_property>
       </wvobject>
-      <wvobject fp_name="/testprocessor/uut/hitsig" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">hitsig</obj_property>
-         <obj_property name="ObjectShortName">hitsig</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/wrongaddrout" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">wrongaddrout</obj_property>
-         <obj_property name="ObjectShortName">wrongaddrout</obj_property>
-      </wvobject>
       <wvobject fp_name="/testprocessor/uut/rf_wrdata_sel_sig" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">rf_wrdata_sel_sig[1:0]</obj_property>
          <obj_property name="ObjectShortName">rf_wrdata_sel_sig[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/pc_sel_sig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_sel_sig[1:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_sel_sig[1:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/tagsig" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">tagsig[2:0]</obj_property>
@@ -327,18 +632,6 @@
       <wvobject fp_name="/testprocessor/uut/alu_func_sig" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">alu_func_sig[3:0]</obj_property>
          <obj_property name="ObjectShortName">alu_func_sig[3:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/causeregister" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">causeregister[7:0]</obj_property>
-         <obj_property name="ObjectShortName">causeregister[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/instrsig" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">instrsig[31:0]</obj_property>
-         <obj_property name="ObjectShortName">instrsig[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/pc_immed_sig" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">pc_immed_sig[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pc_immed_sig[31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/pcaddr" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">pcaddr[31:0]</obj_property>
@@ -373,117 +666,39 @@
       <wvobject fp_name="/testprocessor/uut/wbdata" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">wbdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">wbdata[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/epc" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">epc[31:0]</obj_property>
-         <obj_property name="ObjectShortName">epc[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/ifidout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">ifidout[63:0]</obj_property>
          <obj_property name="ObjectShortName">ifidout[63:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/exdfout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">exdfout[99:0]</obj_property>
-         <obj_property name="ObjectShortName">exdfout[99:0]</obj_property>
+         <obj_property name="ElementShortName">exdfout[100:0]</obj_property>
+         <obj_property name="ObjectShortName">exdfout[100:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/dftcout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">dftcout[135:0]</obj_property>
-         <obj_property name="ObjectShortName">dftcout[135:0]</obj_property>
+         <obj_property name="ElementShortName">dftcout[136:0]</obj_property>
+         <obj_property name="ObjectShortName">dftcout[136:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/idexout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">idexout[167:0]</obj_property>
-         <obj_property name="ObjectShortName">idexout[167:0]</obj_property>
+         <obj_property name="ElementShortName">idexout[168:0]</obj_property>
+         <obj_property name="ObjectShortName">idexout[168:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/tcwbout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">tcwbout[103:0]</obj_property>
-         <obj_property name="ObjectShortName">tcwbout[103:0]</obj_property>
+         <obj_property name="ElementShortName">tcwbout[104:0]</obj_property>
+         <obj_property name="ObjectShortName">tcwbout[104:0]</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">#ff00ff</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group78" type="group">
-      <obj_property name="label">WBMux</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/testprocessor/uut/BusMux4_0/input" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">input[3:0]</obj_property>
-         <obj_property name="ObjectShortName">input[3:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/BusMux4_0/output" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">output[31:0]</obj_property>
-         <obj_property name="ObjectShortName">output[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/BusMux4_0/control" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">control[1:0]</obj_property>
-         <obj_property name="ObjectShortName">control[1:0]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group95" type="group">
-      <obj_property name="label">DECSTAGE</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/instr" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">instr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/awr" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">awr[4:0]</obj_property>
-         <obj_property name="ObjectShortName">awr[4:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="CustomSignalColor">#00ffff</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_wren" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">rf_wren</obj_property>
-         <obj_property name="ObjectShortName">rf_wren</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="CustomSignalColor">#00ffff</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/data" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">data[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="CustomSignalColor">#00ffff</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b_sel" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">rf_b_sel</obj_property>
-         <obj_property name="ObjectShortName">rf_b_sel</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/reset" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">reset</obj_property>
-         <obj_property name="ObjectShortName">reset</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/clk" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">clk</obj_property>
-         <obj_property name="ObjectShortName">clk</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/immedout" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">immedout[31:0]</obj_property>
-         <obj_property name="ObjectShortName">immedout[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_a" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">rf_a[31:0]</obj_property>
-         <obj_property name="ObjectShortName">rf_a[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">rf_b[31:0]</obj_property>
-         <obj_property name="ObjectShortName">rf_b[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b_addr" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">rf_b_addr[4:0]</obj_property>
-         <obj_property name="ObjectShortName">rf_b_addr[4:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/immedsig" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">immedsig[31:0]</obj_property>
-         <obj_property name="ObjectShortName">immedsig[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="group106" type="group">
+   <wvobject fp_name="group157" type="group">
       <obj_property name="label">Control</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject fp_name="/testprocessor/uut/control_0/instr" type="array" db_ref_id="1">
@@ -527,16 +742,17 @@
          <obj_property name="ObjectShortName">unknownopcode</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group118" type="group">
+   <wvobject fp_name="group169" type="group">
       <obj_property name="label">IFSTAGE</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_immed" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">pc_immed[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pc_immed[31:0]</obj_property>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/epc" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">epc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">epc[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_sel" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">pc_sel</obj_property>
-         <obj_property name="ObjectShortName">pc_sel</obj_property>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_sel[1:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_sel[1:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_lden" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">pc_lden</obj_property>
@@ -562,18 +778,804 @@
       <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/muxout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">muxout[31:0]</obj_property>
          <obj_property name="ObjectShortName">muxout[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pcout" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">pcout[31:0]</obj_property>
          <obj_property name="ObjectShortName">pcout[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_plus_4_out" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">pc_plus_4_out[31:0]</obj_property>
          <obj_property name="ObjectShortName">pc_plus_4_out[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_plus_imm_out" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">pc_plus_imm_out[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pc_plus_imm_out[31:0]</obj_property>
+      <wvobject fp_name="/testprocessor/uut/IFSTAGE_0/pc_plus_epc_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_plus_epc_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_plus_epc_out[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group184" type="group">
+      <obj_property name="label">DECSTAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/awr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">awr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">awr[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_wren" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_wren</obj_property>
+         <obj_property name="ObjectShortName">rf_wren</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b_sel</obj_property>
+         <obj_property name="ObjectShortName">rf_b_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/immedout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">immedout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">immedout[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_a" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_a[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_a[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_b[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_b_addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b_addr[4:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_b_addr[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_wrdata" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_wrdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_wrdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/rf_wrdata_mux1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_wrdata_mux1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_wrdata_mux1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DECSTAGE_0/immedsig" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">immedsig[31:0]</obj_property>
+         <obj_property name="ObjectShortName">immedsig[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group193" type="group">
+      <obj_property name="label">ALUSTAGE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/ALUSTAGE_0/rf_a" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_a[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_a[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ALUSTAGE_0/rf_b" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rf_b[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rf_b[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ALUSTAGE_0/immed" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">immed[31:0]</obj_property>
+         <obj_property name="ObjectShortName">immed[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ALUSTAGE_0/alu_bin_sel" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_bin_sel</obj_property>
+         <obj_property name="ObjectShortName">alu_bin_sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ALUSTAGE_0/alu_func" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_func[3:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_func[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ALUSTAGE_0/alu_out" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ALUSTAGE_0/alu_zero" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">alu_zero</obj_property>
+         <obj_property name="ObjectShortName">alu_zero</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/ALUSTAGE_0/muxout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">muxout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">muxout[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group200" type="group">
+      <obj_property name="label">CACHE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/Cache_0/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Cache_0/addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">addr[6:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Cache_0/dout" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dout[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dout[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Cache_0/valid" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">valid</obj_property>
+         <obj_property name="ObjectShortName">valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Cache_0/tag" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">tag[2:0]</obj_property>
+         <obj_property name="ObjectShortName">tag[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/Cache_0/rom" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">rom[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rom[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group205" type="group">
+      <obj_property name="label">IFID</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="vbus339" type="vbus" db_ref_id="1">
+         <obj_property name="label">InstrIn</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[31]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">input[31]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[30]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">input[30]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[29]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">input[29]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[28]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">input[28]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[27]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">input[27]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[26]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">input[26]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[25]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">input[25]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[24]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">input[24]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[23]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">input[23]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[22]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">input[22]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[21]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">input[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[20]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">input[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[19]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">input[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[18]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">input[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[17]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">input[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[16]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">input[16]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[15]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">input[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[14]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">input[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[13]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">input[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[12]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">input[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[11]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">input[11]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[10]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">input[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[9]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">input[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[8]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">input[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[7]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">input[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[6]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">input[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[5]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">input[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[4]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">input[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[3]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">input[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[2]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">input[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[1]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">input[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[0]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">input[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus306" type="vbus" db_ref_id="1">
+         <obj_property name="label">EPCAddrIn</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[63]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[63]</obj_property>
+            <obj_property name="ObjectShortName">input[63]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[62]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[62]</obj_property>
+            <obj_property name="ObjectShortName">input[62]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[61]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[61]</obj_property>
+            <obj_property name="ObjectShortName">input[61]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[60]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[60]</obj_property>
+            <obj_property name="ObjectShortName">input[60]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[59]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[59]</obj_property>
+            <obj_property name="ObjectShortName">input[59]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[58]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[58]</obj_property>
+            <obj_property name="ObjectShortName">input[58]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[57]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[57]</obj_property>
+            <obj_property name="ObjectShortName">input[57]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[56]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[56]</obj_property>
+            <obj_property name="ObjectShortName">input[56]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[55]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[55]</obj_property>
+            <obj_property name="ObjectShortName">input[55]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[54]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[54]</obj_property>
+            <obj_property name="ObjectShortName">input[54]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[53]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[53]</obj_property>
+            <obj_property name="ObjectShortName">input[53]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[52]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[52]</obj_property>
+            <obj_property name="ObjectShortName">input[52]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[51]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[51]</obj_property>
+            <obj_property name="ObjectShortName">input[51]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[50]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[50]</obj_property>
+            <obj_property name="ObjectShortName">input[50]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[49]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[49]</obj_property>
+            <obj_property name="ObjectShortName">input[49]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[48]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[48]</obj_property>
+            <obj_property name="ObjectShortName">input[48]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[47]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[47]</obj_property>
+            <obj_property name="ObjectShortName">input[47]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[46]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[46]</obj_property>
+            <obj_property name="ObjectShortName">input[46]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[45]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[45]</obj_property>
+            <obj_property name="ObjectShortName">input[45]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[44]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[44]</obj_property>
+            <obj_property name="ObjectShortName">input[44]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[43]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[43]</obj_property>
+            <obj_property name="ObjectShortName">input[43]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[42]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[42]</obj_property>
+            <obj_property name="ObjectShortName">input[42]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[41]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[41]</obj_property>
+            <obj_property name="ObjectShortName">input[41]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[40]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[40]</obj_property>
+            <obj_property name="ObjectShortName">input[40]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[39]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[39]</obj_property>
+            <obj_property name="ObjectShortName">input[39]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[38]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[38]</obj_property>
+            <obj_property name="ObjectShortName">input[38]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[37]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[37]</obj_property>
+            <obj_property name="ObjectShortName">input[37]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[36]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[36]</obj_property>
+            <obj_property name="ObjectShortName">input[36]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[35]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[35]</obj_property>
+            <obj_property name="ObjectShortName">input[35]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[34]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[34]</obj_property>
+            <obj_property name="ObjectShortName">input[34]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[33]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[33]</obj_property>
+            <obj_property name="ObjectShortName">input[33]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/input[32]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[32]</obj_property>
+            <obj_property name="ObjectShortName">input[32]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus469" type="vbus" db_ref_id="1">
+         <obj_property name="label">InstrOut</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[31]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[31]</obj_property>
+            <obj_property name="ObjectShortName">output[31]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[30]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[30]</obj_property>
+            <obj_property name="ObjectShortName">output[30]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[29]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[29]</obj_property>
+            <obj_property name="ObjectShortName">output[29]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[28]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[28]</obj_property>
+            <obj_property name="ObjectShortName">output[28]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[27]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[27]</obj_property>
+            <obj_property name="ObjectShortName">output[27]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[26]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[26]</obj_property>
+            <obj_property name="ObjectShortName">output[26]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[25]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[25]</obj_property>
+            <obj_property name="ObjectShortName">output[25]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[24]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[24]</obj_property>
+            <obj_property name="ObjectShortName">output[24]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[23]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[23]</obj_property>
+            <obj_property name="ObjectShortName">output[23]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[22]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[22]</obj_property>
+            <obj_property name="ObjectShortName">output[22]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[21]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[21]</obj_property>
+            <obj_property name="ObjectShortName">output[21]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[20]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[20]</obj_property>
+            <obj_property name="ObjectShortName">output[20]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[19]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[19]</obj_property>
+            <obj_property name="ObjectShortName">output[19]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[18]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[18]</obj_property>
+            <obj_property name="ObjectShortName">output[18]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[17]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[17]</obj_property>
+            <obj_property name="ObjectShortName">output[17]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[16]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[16]</obj_property>
+            <obj_property name="ObjectShortName">output[16]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[15]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">output[15]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[14]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">output[14]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[13]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">output[13]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[12]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">output[12]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[11]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">output[11]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[10]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">output[10]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[9]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">output[9]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[8]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">output[8]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[7]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">output[7]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[6]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">output[6]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[5]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">output[5]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[4]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">output[4]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[3]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">output[3]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[2]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">output[2]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[1]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">output[1]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[0]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">output[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="vbus436" type="vbus" db_ref_id="1">
+         <obj_property name="label">EPCAddrOut</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[63]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[63]</obj_property>
+            <obj_property name="ObjectShortName">output[63]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[62]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[62]</obj_property>
+            <obj_property name="ObjectShortName">output[62]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[61]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[61]</obj_property>
+            <obj_property name="ObjectShortName">output[61]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[60]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[60]</obj_property>
+            <obj_property name="ObjectShortName">output[60]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[59]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[59]</obj_property>
+            <obj_property name="ObjectShortName">output[59]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[58]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[58]</obj_property>
+            <obj_property name="ObjectShortName">output[58]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[57]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[57]</obj_property>
+            <obj_property name="ObjectShortName">output[57]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[56]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[56]</obj_property>
+            <obj_property name="ObjectShortName">output[56]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[55]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[55]</obj_property>
+            <obj_property name="ObjectShortName">output[55]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[54]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[54]</obj_property>
+            <obj_property name="ObjectShortName">output[54]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[53]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[53]</obj_property>
+            <obj_property name="ObjectShortName">output[53]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[52]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[52]</obj_property>
+            <obj_property name="ObjectShortName">output[52]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[51]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[51]</obj_property>
+            <obj_property name="ObjectShortName">output[51]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[50]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[50]</obj_property>
+            <obj_property name="ObjectShortName">output[50]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[49]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[49]</obj_property>
+            <obj_property name="ObjectShortName">output[49]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[48]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[48]</obj_property>
+            <obj_property name="ObjectShortName">output[48]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[47]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[47]</obj_property>
+            <obj_property name="ObjectShortName">output[47]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[46]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[46]</obj_property>
+            <obj_property name="ObjectShortName">output[46]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[45]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[45]</obj_property>
+            <obj_property name="ObjectShortName">output[45]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[44]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[44]</obj_property>
+            <obj_property name="ObjectShortName">output[44]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[43]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[43]</obj_property>
+            <obj_property name="ObjectShortName">output[43]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[42]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[42]</obj_property>
+            <obj_property name="ObjectShortName">output[42]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[41]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[41]</obj_property>
+            <obj_property name="ObjectShortName">output[41]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[40]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[40]</obj_property>
+            <obj_property name="ObjectShortName">output[40]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[39]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[39]</obj_property>
+            <obj_property name="ObjectShortName">output[39]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[38]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[38]</obj_property>
+            <obj_property name="ObjectShortName">output[38]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[37]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[37]</obj_property>
+            <obj_property name="ObjectShortName">output[37]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[36]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[36]</obj_property>
+            <obj_property name="ObjectShortName">output[36]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[35]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[35]</obj_property>
+            <obj_property name="ObjectShortName">output[35]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[34]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[34]</obj_property>
+            <obj_property name="ObjectShortName">output[34]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[33]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[33]</obj_property>
+            <obj_property name="ObjectShortName">output[33]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/testprocessor/uut/IFIDRegister/output[32]" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">[32]</obj_property>
+            <obj_property name="ObjectShortName">output[32]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IFIDRegister/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group210" type="group">
+      <obj_property name="label">IDEX</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/IDEXRegister/input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input[168:0]</obj_property>
+         <obj_property name="ObjectShortName">input[168:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IDEXRegister/output" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">output[168:0]</obj_property>
+         <obj_property name="ObjectShortName">output[168:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IDEXRegister/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/IDEXRegister/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group215" type="group">
+      <obj_property name="label">EXDF</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/EXDFRegister/input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input[100:0]</obj_property>
+         <obj_property name="ObjectShortName">input[100:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/EXDFRegister/output" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">output[100:0]</obj_property>
+         <obj_property name="ObjectShortName">output[100:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/EXDFRegister/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/EXDFRegister/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group220" type="group">
+      <obj_property name="label">DFTC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input[136:0]</obj_property>
+         <obj_property name="ObjectShortName">input[136:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/output" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">output[136:0]</obj_property>
+         <obj_property name="ObjectShortName">output[136:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/DFTCRegister/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group230" type="group">
+      <obj_property name="label">TCWB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/TCWBRegister/input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input[104:0]</obj_property>
+         <obj_property name="ObjectShortName">input[104:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/TCWBRegister/output" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">output[104:0]</obj_property>
+         <obj_property name="ObjectShortName">output[104:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/TCWBRegister/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/TCWBRegister/reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group235" type="group">
+      <obj_property name="label">WBMux</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/BusMux4_0/input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input[3:0]</obj_property>
+         <obj_property name="ObjectShortName">input[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/BusMux4_0/output" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">output[31:0]</obj_property>
+         <obj_property name="ObjectShortName">output[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/BusMux4_0/control" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">control[1:0]</obj_property>
+         <obj_property name="ObjectShortName">control[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/BusMux4_0/outputline" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">outputline[1:0]</obj_property>
+         <obj_property name="ObjectShortName">outputline[1:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group239" type="group">
+      <obj_property name="label">WrongAddr</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testprocessor/uut/WrongAddr/input" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">input[21:0]</obj_property>
+         <obj_property name="ObjectShortName">input[21:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/WrongAddr/instr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testprocessor/uut/WrongAddr/output" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">output</obj_property>
+         <obj_property name="ObjectShortName">output</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>
